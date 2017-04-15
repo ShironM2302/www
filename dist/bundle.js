@@ -80,10 +80,9 @@ eval("// removed by extract-text-webpack-plugin\n\n//////////////////\n// WEBPAC
 
 /***/ }),
 /* 2 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
-"use strict";
-eval("/* WEBPACK VAR INJECTION */(function(jQuery) {Object.defineProperty(__webpack_exports__, \"__esModule\", { value: true });\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery__ = __webpack_require__(0);\n/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_jquery___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_jquery__);\nvar scss = __webpack_require__(1);\r\n\r\n\r\n\r\n\r\nvar lol = __WEBPACK_IMPORTED_MODULE_0_jquery___default()('.hamburger');\r\n\r\nconsole.log(lol);\r\n\r\nvar lool = jQuery('.footer');\r\n\r\nconsole.log(lool);\r\n\n/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(0)))\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/script.js\n// module id = 2\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/script.js?");
+eval("/* WEBPACK VAR INJECTION */(function($, jQuery) {var scss = __webpack_require__(1);\r\n\r\n\r\n\r\n\r\nvar lol = $('.hamburger');\r\n\r\nconsole.log(lol);\r\n\r\nvar lool = jQuery('.footer');\r\n\r\nconsole.log(lool);\r\n\n/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(0), __webpack_require__(0)))\n\n//////////////////\n// WEBPACK FOOTER\n// ./src/script.js\n// module id = 2\n// module chunks = 0\n\n//# sourceURL=webpack:///./src/script.js?");
 
 /***/ })
 /******/ ]);

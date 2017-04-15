@@ -432,6 +432,22 @@ html {
 body {
   position: relative; }
 
+@-webkit-keyframes burger-jiggle {
+  0% {
+    width: 100%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 100%; } }
+
+@keyframes burger-jiggle {
+  0% {
+    width: 100%; }
+  50% {
+    width: 50%; }
+  100% {
+    width: 100%; } }
+
 .header {
   width: 100%;
   height: 10vh;
@@ -467,7 +483,8 @@ body {
   width: 30px;
   height: 30px;
   cursor: pointer;
-  margin-right: 5%; }
+  margin-right: 5%;
+  z-index: 9999; }
   .hamburger .line {
     -ms-flex-item-align: start;
         align-self: flex-start;
@@ -475,11 +492,32 @@ body {
     width: 100%;
     background: white; }
   .hamburger .top-line {
-    width: 100%; }
+    width: 100%;
+    -webkit-transition: -webkit-animation 100ms ease-in-out;
+    transition: -webkit-animation 100ms ease-in-out;
+    transition: animation 100ms ease-in-out;
+    transition: animation 100ms ease-in-out, -webkit-animation 100ms ease-in-out; }
   .hamburger .mid-line {
-    width: 75%; }
+    width: 75%;
+    -webkit-transition: -webkit-animation 200ms ease-in-out;
+    transition: -webkit-animation 200ms ease-in-out;
+    transition: animation 200ms ease-in-out;
+    transition: animation 200ms ease-in-out, -webkit-animation 200ms ease-in-out; }
   .hamburger .bot-line {
-    width: 50%; }
+    width: 50%;
+    -webkit-transition: -webkit-animation 400ms ease-in-out;
+    transition: -webkit-animation 400ms ease-in-out;
+    transition: animation 400ms ease-in-out;
+    transition: animation 400ms ease-in-out, -webkit-animation 400ms ease-in-out; }
+  .hamburger:hover .top-line {
+    -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 100ms;
+            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 100ms; }
+  .hamburger:hover .mid-line {
+    -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 200ms;
+            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 200ms; }
+  .hamburger:hover .bot-line {
+    -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 400ms;
+            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 400ms; }
 
 .hero {
   width: 100%;

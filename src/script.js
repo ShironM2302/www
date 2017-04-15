@@ -1,7 +1,7 @@
 var scss = require('./styles/style.scss');
 
 
-import $ from 'jquery';
+
 
 var lol = $('.hamburger');
 

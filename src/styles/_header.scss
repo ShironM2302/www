@@ -25,6 +25,7 @@
     height: 30px;
     cursor: pointer;
     margin-right: 5%;
+    z-index: 9999;
 
     .line{
         align-self: flex-start;
@@ -34,11 +35,31 @@
     }
     .top-line{
         width: 100%;
+        transition: animation 100ms ease-in-out
+        
     }
     .mid-line{
         width: 75%;
+        transition: animation 200ms ease-in-out
+ 
     }
     .bot-line{
-        width: 50%
+        width: 50%;
+        transition: animation 400ms ease-in-out
+    }
+
+    // hover
+    &:hover{
+        .top-line{
+            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 100ms;
+        }
+        .mid-line{
+            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 200ms;
+        }
+        .bot-line{
+            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 400ms;
+        }
+        
+
     }
 }

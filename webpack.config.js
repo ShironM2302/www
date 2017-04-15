@@ -1,5 +1,6 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var BrowserSyncPlugin = require('browser-sync-webpack-plugin');
+const webpack = require('webpack');
 
 module.exports = {
   entry: './src/script.js',
@@ -20,6 +21,11 @@ module.exports = {
    ]
  },
   plugins: [
+    new webpack.ProvidePlugin({
+      $: "jquery",
+      jQuery: "jquery",
+      "window.jQuery": "jquery"
+    }),
     new ExtractTextPlugin("./dist/style.css"),
     new BrowserSyncPlugin({
       host: 'localhost',

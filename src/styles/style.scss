@@ -1,7 +1,11 @@
+@import "./node_modules/scss-flex-grid/flex-grid";
 @import '_reset.scss';
 @import '_variables.scss';
+@import '_base.scss';
 @import '_mixins.scss';
+@import '_keyframes.scss';
 @import '_header.scss';
+@import '_hero.scss';
 @import '_portfolio.scss';
 @import '_about.scss';
 @import '_contact.scss';

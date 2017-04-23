@@ -1,12 +1,14 @@
 var scss = require('./styles/style.scss');
 import "jQuery";
 
+// timeline slider
+
 var timelineSlider = $('.timeline-slider');
 
 console.log(timelineSlider[0].value);
 
 function timeline() {
- 
+
     let value = timelineSlider[0].value;
     console.log(value)
 
@@ -42,3 +44,18 @@ function timeline() {
 
 timelineSlider.on('change', timeline);
 timelineSlider.on('oninput', timeline);
+
+
+//portfolio filter
+
+$(".filter").click(function () {
+    $('.filter').removeClass('filter-active');
+    $(this).addClass('filter-active');
+    var selectedClass = $(this).attr("data-filter");
+    $(".portfolio-row").fadeTo(1000);
+    $(".portfolio-item").not(selectedClass).fadeOut();
+    setTimeout(function () {
+        $(selectedClass).fadeIn();
+    }, 250);
+
+});

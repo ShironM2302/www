@@ -1,0 +1,49 @@
+.toolbar{
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    justify-content: space-around;
+    
+    
+}
+
+.filter{
+    display: inline-block;
+    margin: 0 .5rem;
+    cursor: pointer;
+}
+
+.filter-active{
+    text-decoration: underline;
+    color:red;
+
+}
+
+.portfolio-row{
+    justify-content: center;
+
+}
+
+.portfolio-item{
+    flex:1 0 auto;
+    max-width: 100%;
+    margin: 1rem 1rem;
+}
+
+.portfolio-wrapper{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    max-width: 100%;
+    height: 100%;
+}
+
+.portfolio-img{
+    max-width: 100%;
+    height: auto;
+    border: 2px solid goldenrod;
+}
+
+.portfolio-label{
+
+}

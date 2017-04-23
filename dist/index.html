@@ -7,6 +7,7 @@
   <link rel="shortcut icon" href="assets/ico/favicon.ico">
   <link rel="logo" type="image/svg" href="assets/img/logo/logo.svg">
   <title>Shiron Manuelpillai | Front-End Developer</title>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/4f6a4b08efdad6bb29f9cc801f5c07e263b39907/devicon.min.css">
   <link rel="stylesheet" href="style.css">
 </head>
 
@@ -31,6 +32,76 @@
 
   <!--start of portfolio-->
   <section id="portfolio" class="portfolio">
+    <div class="container">
+      <div class="row">
+        <h1>Portfolio</h1>
+      </div>
+
+      <div class="row">
+        <ul class="toolbar">
+          <li class="filter filter-active" data-filter=".all">All</li>
+          <li class="filter" data-filter=".app">Web Apps</li>
+          <li class="filter" data-filter=".web">Websites</li>
+          <li class="filter" data-filter=".other">Other</li>
+        </ul>
+      </div>
+
+      <div class="row portfolio-row">
+
+        <div class="portfolio-item app all">
+          <div class="portfolio-wrapper">
+            <img class="portfolio-img" src="images/editor.png" alt="image editor">
+            <div class="portfolio-label">
+              <!--<button></button>
+              <button></button>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item web all">
+          <div class="portfolio-wrapper">
+            <img class="portfolio-img" src="images/ctv.png" alt="">
+            <div class="portfolio-label">
+              <!--<button></button>
+              <button></button>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item app all">
+          <div class="portfolio-wrapper">
+            <img class="portfolio-img" src="images/taxcalc.png" alt="">
+            <div class="portfolio-label">
+              <!--<button></button>
+              <button></button>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item app all">
+          <div class="portfolio-wrapper">
+            <img class="portfolio-img" src="images/weather.png" alt="">
+            <div class="portfolio-label">
+              <!--<button></button>
+              <button></button>-->
+            </div>
+          </div>
+        </div>
+
+        <div class="portfolio-item app all">
+          <div class="portfolio-wrapper">
+            <img class="portfolio-img" src="images/ENF.png" alt="">
+            <div class="portfolio-label">
+              <!--<button></button>
+              <button></button>-->
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!--end of container-->
+    </div>
 
   </section>
   <!--end of portfolio-->
@@ -165,6 +236,41 @@
   <!--start of contact-->
   <section id="contact" class="contact">
 
+    <div class="container">
+
+      <div class="contact-box"></div>
+
+
+      <div class="row">
+        <h2>Get in touch</h2>
+      </div>
+
+      <div class="row">
+        <p class="contact-intro">Have a project or oppurtunity you would like to discuss with me</p>
+      </div>
+
+      <div class="row form-row">
+        <form class="contact-form" action="submit">
+          <fieldset>
+            <label class="form-label form-label--hide" for="name">Your Name:</label>
+            <input id="name" type="text" placeholder="Your name...">
+          </fieldset>
+          <fieldset>
+            <label class="form-label form-label--hide" for="email">Your Email:</label>
+            <input id="email" type="email" placeholder="Your email...">
+          </fieldset>
+          <fieldset>
+            <label class="form-label form-label--hide" for="message">Your Message:</label>
+            <textarea id="message" name="your-message" id="" cols="30" rows="10" placeholder="Type your message here..."></textarea>
+          </fieldset>
+        </form>
+
+        <button type="submit">Send</button>
+      </div>
+
+
+    </div>
+    <!--end of container-->
   </section>
   <!--end of contact-->
 

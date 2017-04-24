@@ -81,3 +81,79 @@ h4{
     font-size: .9rem;
     text-align: center;
 }
+
+.button{
+    position: relative;
+    cursor: pointer;
+    padding: .3rem 2rem;
+    display: inline-block;
+    background-color: white;
+    border: none;
+    font-size: inherit;
+    margin: 0 auto;
+    text-transform: uppercase;
+    overflow: hidden;
+        transition: all 0.3s;
+        z-index: 0;
+
+    &:after{
+        content: '';
+    position: absolute;
+    z-index: -1;
+        width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+     opacity: 0;
+         transition: all 0.3s;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
+
+    &:hover{
+        color:white;
+
+        &:after{
+            background-color: red;
+            height: 260%;
+            opacity: 1;
+        }
+
+        }
+
+
+    
+}
+
+.btn-line{
+    background-color: red;
+    position: absolute;
+    z-index: 1;
+}
+
+.btn-line--top{
+        top: 0%;
+    right: 0;
+    left: 0;
+    height: 2px;
+}
+
+.btn-line--btm{
+        bottom: 0%;
+    right: 0;
+    left: 0;
+    height: 2px;
+}
+
+.btn-line--left{
+    top: 0%;
+    left: 0;
+    width: 2px;
+    height: 50%;
+}
+
+.btn-line--right{
+    bottom: 0%;
+    right: 0;
+    width: 2px;
+    height: 50%;
+}

@@ -89,6 +89,69 @@ h4 {
   font-size: .9rem;
   text-align: center; }
 
+.button {
+  position: relative;
+  cursor: pointer;
+  padding: .3rem 2rem;
+  display: inline-block;
+  background-color: white;
+  border: none;
+  font-size: inherit;
+  margin: 0 auto;
+  text-transform: uppercase;
+  overflow: hidden;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  z-index: 0; }
+  .button:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+            transform: translateX(-50%) translateY(-50%) rotate(45deg); }
+  .button:hover {
+    color: white; }
+    .button:hover:after {
+      background-color: red;
+      height: 260%;
+      opacity: 1; }
+
+.btn-line {
+  background-color: red;
+  position: absolute;
+  z-index: 1; }
+
+.btn-line--top {
+  top: 0%;
+  right: 0;
+  left: 0;
+  height: 2px; }
+
+.btn-line--btm {
+  bottom: 0%;
+  right: 0;
+  left: 0;
+  height: 2px; }
+
+.btn-line--left {
+  top: 0%;
+  left: 0;
+  width: 2px;
+  height: 50%; }
+
+.btn-line--right {
+  bottom: 0%;
+  right: 0;
+  width: 2px;
+  height: 50%; }
+
 @-webkit-keyframes burger-jiggle {
   0% {
     width: 100%; }
@@ -488,7 +551,6 @@ input[type=range]:focus::-ms-fill-upper {
     .contact-form fieldset input {
       outline: none;
       padding: 0.7rem 1rem;
-      font-size: 1rem;
       border: 2px solid #e9e9e9;
       border-radius: 20px; }
     .contact-form fieldset textarea {

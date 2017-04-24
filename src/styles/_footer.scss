@@ -1,0 +1,45 @@
+.footer{
+    background-color: black;
+    color:white;
+}
+
+.footer-row{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-logo{
+    margin-left: 0;
+    margin-bottom: .5rem;
+}
+
+.icon-row{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    
+    svg{
+        fill:white;
+        height: 1.5rem;
+        width: 1.5rem;
+        transition: 0.3s all;
+    }
+
+    .linkedin{
+        &:hover{
+            fill:#0077B5;
+        }
+    }
+
+        .github{
+        &:hover{
+            fill:#582879;
+        }
+    }
+            .twitter{
+        &:hover{
+            fill:#1DA1F2;
+        }
+    }
+}

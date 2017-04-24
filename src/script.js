@@ -59,3 +59,39 @@ $(".filter").click(function () {
     }, 250);
 
 });
+
+
+//contact form
+
+$('#name').on('keyup focus', function (e) {
+
+    if (this.value == '') {
+        $(this).prev().removeClass('form-label--show');
+
+    }
+    else {
+        $(this).prev().addClass('form-label--show');
+    }
+});
+
+$('#email').on('keyup focus', function (e) {
+
+    if (this.value == '') {
+        $(this).prev().removeClass('form-label--show');
+
+    }
+    else {
+        $(this).prev().addClass('form-label--show');
+    }
+});
+
+$('#message').on('keyup focus', function (e) {
+
+    if (this.value == '') {
+        $(this).prev().removeClass('form-label--show');
+
+    }
+    else {
+        $(this).prev().addClass('form-label--show');
+    }
+})

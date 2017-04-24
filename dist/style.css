@@ -91,6 +91,7 @@ h4 {
 
 .button {
   position: relative;
+  outline: none;
   cursor: pointer;
   padding: .3rem 2rem;
   display: inline-block;
@@ -102,7 +103,8 @@ h4 {
   overflow: hidden;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-  z-index: 0; }
+  z-index: 0;
+  -webkit-tap-highlight-color: transparent; }
   .button:after {
     content: '';
     position: absolute;
@@ -151,6 +153,36 @@ h4 {
   right: 0;
   width: 2px;
   height: 50%; }
+
+.arrow-block {
+  position: relative;
+  bottom: 2px;
+  margin: 0 auto;
+  margin-bottom: 1.2rem; }
+  .arrow-block span {
+    display: block;
+    text-align: center;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 1rem; }
+  .arrow-block .arrow {
+    position: absolute;
+    bottom: -2.4rem;
+    left: 50%;
+    background-color: red;
+    width: 2px;
+    height: 40px; }
+    .arrow-block .arrow:after {
+      position: absolute;
+      content: "";
+      width: 12px;
+      height: 12px;
+      border-bottom: 2px solid red;
+      border-left: 2px solid red;
+      bottom: 0;
+      left: -5px;
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg); }
 
 @-webkit-keyframes burger-jiggle {
   0% {
@@ -248,25 +280,45 @@ h4 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style-type: none;
-  -ms-flex-pack: distribute;
-      justify-content: space-around; }
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
 
 .filter {
-  display: inline-block;
-  margin: 0 .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.8rem;
+  margin: .4rem .5rem;
   cursor: pointer; }
 
-.filter-active {
-  text-decoration: underline;
-  color: red; }
+.filter-button {
+  min-width: 100px; }
+
+.filter-active .filter-button {
+  color: white; }
+  .filter-active .filter-button:after {
+    background-color: red;
+    height: 200px;
+    opacity: 1; }
 
 .portfolio-row {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  min-height: 150px; }
 
 .portfolio-item {
   -webkit-box-flex: 1;
@@ -493,7 +545,8 @@ input[type=range]:focus::-ms-fill-upper {
 
 /*=====  End of input range  ======*/
 .contact {
-  position: relative; }
+  position: relative;
+  padding-bottom: 1rem; }
 
 .contact-box {
   z-index: -1;
@@ -565,7 +618,52 @@ input[type=range]:focus::-ms-fill-upper {
 .form-label {
   display: block;
   text-align: center;
-  font-size: 0.8rem; }
+  font-size: 0.8rem;
+  opacity: 0;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all; }
 
-.form-label--hide {
-  opacity: 0; }
+.form-label--show {
+  opacity: 1;
+  -webkit-transition: 0.3s ease-in-out all;
+  transition: 0.3s ease-in-out all; }
+
+.footer {
+  background-color: black;
+  color: white; }
+
+.footer-row {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.footer-logo {
+  margin-left: 0;
+  margin-bottom: .5rem; }
+
+.icon-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%; }
+  .icon-row svg {
+    fill: white;
+    height: 1.5rem;
+    width: 1.5rem;
+    -webkit-transition: 0.3s all;
+    transition: 0.3s all; }
+  .icon-row .linkedin:hover {
+    fill: #0077B5; }
+  .icon-row .github:hover {
+    fill: #582879; }
+  .icon-row .twitter:hover {
+    fill: #1DA1F2; }

@@ -1,26 +1,43 @@
+.portfolio{
+    // background-color: gray;
+}
+
 .toolbar{
     display: flex;
+    flex-direction: column;
+    align-content: center;
     flex-wrap: wrap;
     list-style-type: none;
-    justify-content: space-around;
+    justify-content: center;
     
     
 }
 
 .filter{
-    display: inline-block;
-    margin: 0 .5rem;
+    display: flex;
+    justify-content: center;
+    font-size: 0.8rem;
+    margin: .4rem .5rem;
     cursor: pointer;
 }
 
-.filter-active{
-    text-decoration: underline;
-    color:red;
+.filter-button{
+    min-width: 100px;
+     
+}
 
+.filter-active .filter-button{
+    color:white;
+    &:after{
+                    background-color: red;
+            height: 200px;
+            opacity: 1;
+    }
 }
 
 .portfolio-row{
     justify-content: center;
+    min-height: 150px;
 
 }
 

@@ -222,7 +222,7 @@ h4 {
 .header-logo {
   color: white; }
 
-.hamburger {
+.menu-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -237,39 +237,116 @@ h4 {
   cursor: pointer;
   margin-right: 5%;
   z-index: 9999; }
-  .hamburger .line {
+  .menu-icon .line {
     -ms-flex-item-align: start;
         align-self: flex-start;
     height: 2px;
     width: 100%;
     background: white; }
-  .hamburger .top-line {
+
+.hamburger .top-line {
+  width: 100%;
+  -webkit-transition: -webkit-animation 100ms ease-in-out;
+  transition: -webkit-animation 100ms ease-in-out;
+  transition: animation 100ms ease-in-out;
+  transition: animation 100ms ease-in-out, -webkit-animation 100ms ease-in-out; }
+
+.hamburger .mid-line {
+  width: 75%;
+  -webkit-transition: -webkit-animation 200ms ease-in-out;
+  transition: -webkit-animation 200ms ease-in-out;
+  transition: animation 200ms ease-in-out;
+  transition: animation 200ms ease-in-out, -webkit-animation 200ms ease-in-out; }
+
+.hamburger .bot-line {
+  width: 50%;
+  -webkit-transition: -webkit-animation 400ms ease-in-out;
+  transition: -webkit-animation 400ms ease-in-out;
+  transition: animation 400ms ease-in-out;
+  transition: animation 400ms ease-in-out, -webkit-animation 400ms ease-in-out; }
+
+.hamburger:hover .top-line {
+  -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 100ms;
+          animation: burger-jiggle 1s infinite ease-in-out alternate forwards 100ms; }
+
+.hamburger:hover .mid-line {
+  -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 200ms;
+          animation: burger-jiggle 1s infinite ease-in-out alternate forwards 200ms; }
+
+.hamburger:hover .bot-line {
+  -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 400ms;
+          animation: burger-jiggle 1s infinite ease-in-out alternate forwards 400ms; }
+
+.cross {
+  position: relative; }
+  .cross .top-line {
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+    position: absolute;
+    -webkit-transition: -webkit-transform 100ms ease-in-out;
+    transition: -webkit-transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out;
+    transition: transform 100ms ease-in-out, -webkit-transform 100ms ease-in-out; }
+  .cross .mid-line {
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in-out;
+    transition: opacity 200ms ease-in-out; }
+  .cross .bot-line {
+    -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+    position: absolute;
     width: 100%;
-    -webkit-transition: -webkit-animation 100ms ease-in-out;
-    transition: -webkit-animation 100ms ease-in-out;
-    transition: animation 100ms ease-in-out;
-    transition: animation 100ms ease-in-out, -webkit-animation 100ms ease-in-out; }
-  .hamburger .mid-line {
-    width: 75%;
-    -webkit-transition: -webkit-animation 200ms ease-in-out;
-    transition: -webkit-animation 200ms ease-in-out;
-    transition: animation 200ms ease-in-out;
-    transition: animation 200ms ease-in-out, -webkit-animation 200ms ease-in-out; }
-  .hamburger .bot-line {
-    width: 50%;
-    -webkit-transition: -webkit-animation 400ms ease-in-out;
-    transition: -webkit-animation 400ms ease-in-out;
-    transition: animation 400ms ease-in-out;
-    transition: animation 400ms ease-in-out, -webkit-animation 400ms ease-in-out; }
-  .hamburger:hover .top-line {
-    -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 100ms;
-            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 100ms; }
-  .hamburger:hover .mid-line {
-    -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 200ms;
-            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 200ms; }
-  .hamburger:hover .bot-line {
-    -webkit-animation: burger-jiggle 1s infinite ease-in-out alternate forwards 400ms;
-            animation: burger-jiggle 1s infinite ease-in-out alternate forwards 400ms; }
+    -webkit-transition: -webkit-transform 400ms ease-in-out;
+    transition: -webkit-transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out;
+    transition: transform 400ms ease-in-out, -webkit-transform 400ms ease-in-out; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.77);
+  z-index: 5;
+  opacity: 0; }
+
+.overlay--show {
+  opacity: 1; }
+
+.nav {
+  height: 70%;
+  width: inherit; }
+
+.nav-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+  text-decoration: none;
+  list-style-type: none; }
+
+.nav-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+  .nav-item a {
+    display: block; }
+
+.nav-button {
+  background-color: transparent;
+  color: red; }
 
 .hero {
   width: 100%;

@@ -17,8 +17,8 @@
     color:white;
 }
 
-.hamburger{
-    display: flex;
+.menu-icon{
+        display: flex;
     flex-direction: column;
     justify-content: space-around;
     width: 30px;
@@ -27,12 +27,18 @@
     margin-right: 5%;
     z-index: 9999;
 
-    .line{
+        .line{
         align-self: flex-start;
         height: 2px;
         width: 100%;
         background: white;
     }
+
+}
+
+.hamburger{
+
+
     .top-line{
         width: 100%;
         transition: animation 100ms ease-in-out
@@ -62,4 +68,83 @@
         
 
     }
+}
+
+
+.cross{
+position: relative;
+
+
+    .top-line{
+        transform: rotate(45deg);
+        position: absolute;
+        transition: transform 100ms ease-in-out;
+        
+    }
+    .mid-line{
+        opacity: 0;
+        transition: opacity 200ms ease-in-out;
+ 
+    }
+    .bot-line{
+        transform: rotate(-45deg);
+        position: absolute;
+        width: 100%;
+        transition: transform 400ms ease-in-out;
+    }
+
+
+}
+
+
+.overlay{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.77);
+    z-index: 5;
+    opacity: 0;
+}
+
+.overlay--show{
+    opacity: 1;
+}
+
+.nav{
+    height: 70%;
+    width: inherit;
+
+}
+
+.nav-list{
+
+    display: flex;
+flex-direction: column;
+align-content: center;
+justify-content: space-around;
+    height: 100%;
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+.nav-item{
+    display: flex;
+    justify-content: center;
+
+
+
+    a{
+        display: block;
+        
+    }
+
+
+}
+
+.nav-button{
+    background-color: transparent;
+    color:red;
 }

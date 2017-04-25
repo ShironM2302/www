@@ -1,6 +1,13 @@
 var scss = require('./styles/style.scss');
 import "jQuery";
 
+//nav menu
+
+$('.menu-icon').on('click', function (){
+    $(this).toggleClass('hamburger cross');
+    $('.overlay').toggleClass('overlay--show');
+})
+
 // timeline slider
 
 var timelineSlider = $('.timeline-slider');
@@ -95,3 +102,5 @@ $('#message').on('keyup focus', function (e) {
         $(this).prev().addClass('form-label--show');
     }
 })
+
+

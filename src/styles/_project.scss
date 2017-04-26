@@ -1,0 +1,100 @@
+.project-header {
+    background-color: red;
+    position: relative;
+}
+
+.jumbotron {
+    background-color: #607d8b;
+    width: 100%;
+    height: 60vh;
+}
+
+.jumbotron-img {}
+
+.project-title {
+    font-size: 2rem;
+}
+
+.back-link {
+    display: block;
+    float: right;
+    margin-top: 1rem;
+}
+
+.back-button {}
+
+.live-link {}
+
+.live-button {}
+
+.project-box {
+    background-color: rgba(128, 128, 128, 0.16);
+    width: 100%;
+    min-height: 10rem;
+    position: relative;
+        padding: 1rem;
+
+    p{
+        text-align: center;
+    }
+}
+
+.project-quote-left {
+    position: absolute;
+    top: -1rem;
+    left: -1rem;
+    font-size: 2rem;
+}
+
+.project-quote-right {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+    font-size: 2rem;
+}
+
+.info-block{
+            // flex:1 1 48%;
+                padding: 1rem;
+
+     
+
+    h3{
+        text-align: left;
+        position: relative;
+
+        &:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left:0;
+            width: 30%;
+            height:2px;
+            background-color: red;
+        }
+    }
+
+    p{
+
+    }
+}
+
+.info-block-design{
+
+
+
+}
+
+.info-block-dev{
+    margin-top: 1rem;
+    // margin-left:1rem;
+}
+
+.next-link{
+    margin-bottom: 1rem;
+
+}
+
+.next-button{
+
+}

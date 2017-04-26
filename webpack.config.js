@@ -30,7 +30,7 @@ module.exports = {
     new BrowserSyncPlugin({
       host: 'localhost',
       port: 3000,
-      files: ['./dist/*html'],
+      files: ['./dist/*.html'],
       server: { baseDir: ['dist'] }
     })
   ]

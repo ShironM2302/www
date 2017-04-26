@@ -88,7 +88,7 @@ h4{
     cursor: pointer;
     padding: .3rem 2rem;
     display: inline-block;
-    background-color: white;
+    background-color: transparent;
     border: none;
     font-size: inherit;
     margin: 0 auto;
@@ -122,10 +122,8 @@ h4{
         }
 
         }
-
-
-    
 }
+
 
 .btn-line{
     background-color: red;

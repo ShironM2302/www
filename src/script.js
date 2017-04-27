@@ -8,11 +8,16 @@ $('.menu-icon').on('click', function (){
     $('.overlay').toggleClass('overlay--show');
 })
 
+//parralx footer
+
+var footerParaHeight = $(".footer").height();
+$(".content").css("margin-bottom",footerParaHeight);
+
 // timeline slider
 
 var timelineSlider = $('.timeline-slider');
 
-console.log(timelineSlider[0].value);
+// console.log(timelineSlider[0].value);
 
 function timeline() {
 

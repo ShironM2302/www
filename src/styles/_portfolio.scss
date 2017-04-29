@@ -1,53 +1,59 @@
-.portfolio{
+.portfolio {
     // background-color: gray;
 }
 
-.toolbar{
+.toolbar {
     display: flex;
     flex-direction: column;
     align-content: center;
     flex-wrap: wrap;
     list-style-type: none;
     justify-content: center;
-    
-    
+    @include mQ($laptop) {
+        flex-direction: row;
+    }
 }
 
-.filter{
+.filter {
     display: flex;
     justify-content: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     margin: .4rem .5rem;
     cursor: pointer;
 }
 
-.filter-button{
+.filter-button {
     min-width: 100px;
-     
 }
 
-.filter-active .filter-button{
-    color:white;
-    &:after{
-                    background-color: red;
-            height: 200px;
-            opacity: 1;
+.filter-active .filter-button {
+    color: white;
+    &:after {
+        background-color: red;
+        height: 200px;
+        opacity: 1;
     }
 }
 
-.portfolio-row{
+.portfolio-row {
     justify-content: center;
     min-height: 150px;
-
 }
 
-.portfolio-item{
-    flex:1 0 auto;
+.portfolio-item {
+    flex: 1 0 auto;
     max-width: 100%;
     margin: 1rem 1rem;
+
+    @include mQ($laptop) {
+        flex: 0 1 45%;
+    }
+    @include mQ($lg-laptop) {
+        flex: 0 1 45%;
+    }
 }
 
-.portfolio-wrapper{
+.portfolio-wrapper {
     overflow: hidden;
     position: relative;
     cursor: pointer;
@@ -55,15 +61,15 @@
     height: 100%;
 }
 
-.portfolio-img{
+.portfolio-img {
     max-width: 100%;
     height: auto;
     border: 2px solid goldenrod;
 }
 
-.portfolio-label{
+.portfolio-label {
     position: absolute;
-    bottom:-100%;
+    bottom: -100%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -72,17 +78,33 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-
-    a{
+    a {
         display: block;
     }
 }
 
-.portfolio-wrapper:hover .portfolio-label{
-    bottom:0;
+.portfolio-wrapper:hover .portfolio-label {
+    bottom: 0;
 }
 
-.portfolio-label-button{
-    color:red;
+.portfolio-label-button {
+    color: red;
+}
 
+marquee{
+    width: 100%;
+    border: 2px solid black;
+    padding: .5rem;
+
+    svg{
+        height: 80px;  
+    }
+
+    @include mQ($laptop){
+        width: 85%;
+
+        svg{
+            height:100px;
+        }
+    }
 }

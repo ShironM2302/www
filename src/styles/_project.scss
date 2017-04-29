@@ -55,13 +55,13 @@
 
 .info-block{
             // flex:1 1 48%;
+            flex: 1 1 100%;
                 padding: 1rem;
-
-     
 
     h3{
         text-align: left;
         position: relative;
+        margin-bottom: .5rem;
 
         &:after{
             content: "";
@@ -77,6 +77,18 @@
     p{
 
     }
+}
+
+.info-block-stack{
+
+    span{
+        background-color: #ccc;
+        color: white;
+        padding:0.2rem;
+        text-transform: uppercase;
+
+    }
+
 }
 
 .info-block-design{

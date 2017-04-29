@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oswald|Quattrocento');
 
 html{
-    font-size: calc(100% + .45vw);
+    font-size: calc(100% + .35vw);
 }
 
 body{
@@ -72,6 +72,7 @@ h2{
     font-size: 2rem;
     text-align: center;
     position: relative;
+    background: white;
 
         &:before{
         content: '';
@@ -97,6 +98,8 @@ h4{
     text-transform: capitalize;
     font-size: .9rem;
     text-align: center;
+    font-style: italic;
+    font-weight: 400;
 }
 
 .button{
@@ -181,6 +184,7 @@ h4{
     bottom: 2px;
     margin: 0 auto;
     margin-bottom: 1.2rem;
+    margin-top: 1.2rem;
 
     span{
         display: block;
@@ -197,6 +201,7 @@ h4{
     background-color: red;
     width: 2px;
     height: 40px;
+    z-index: 3;
 
     &:after{
         position: absolute;

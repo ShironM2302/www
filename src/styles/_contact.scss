@@ -8,34 +8,12 @@
     z-index: -1;
     height: 90%;
     width: 100%;
-    border: 2px solid black;
-    border-top: none;
+    border: 4px solid black;
     top:2.4rem;
     position: absolute;
-
-    &:after{
-        content:"";
-        position: absolute;
-        height: 2px;
-        width: 6px;
-        background-color: black;
-        left:0;
-        z-index: -1;
-    }
-
-    &:before{
-         content:"";
-         position: absolute;
-         height: 2px;
-         width: 6px; 
-         background-color: black;
-         right:0;
-         z-index: -1;  
-    }
-
-}
-
-.contact-title{
+    margin: 0 auto;
+    right: 0;
+    left:0;
 
 }
 
@@ -85,7 +63,7 @@
 .form-label{
     display: block;
     text-align: center;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     opacity: 0;
     transition: 0.3s ease-in-out all;
 }

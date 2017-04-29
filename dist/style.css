@@ -7,7 +7,7 @@
   padding: 0; }
 
 html {
-  font-size: calc(100% + .45vw); }
+  font-size: calc(100% + .35vw); }
 
 body {
   position: relative;
@@ -72,7 +72,8 @@ h2 {
   text-transform: uppercase;
   font-size: 2rem;
   text-align: center;
-  position: relative; }
+  position: relative;
+  background: white; }
   h2:before {
     content: '';
     position: absolute;
@@ -97,7 +98,9 @@ h4 {
       align-self: center;
   text-transform: capitalize;
   font-size: .9rem;
-  text-align: center; }
+  text-align: center;
+  font-style: italic;
+  font-weight: 400; }
 
 .button {
   position: relative;
@@ -168,7 +171,8 @@ h4 {
   position: relative;
   bottom: 2px;
   margin: 0 auto;
-  margin-bottom: 1.2rem; }
+  margin-bottom: 1.2rem;
+  margin-top: 1.2rem; }
   .arrow-block span {
     display: block;
     text-align: center;
@@ -181,7 +185,8 @@ h4 {
     left: 50%;
     background-color: red;
     width: 2px;
-    height: 40px; }
+    height: 40px;
+    z-index: 3; }
     .arrow-block .arrow:after {
       position: absolute;
       content: "";
@@ -399,6 +404,12 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center; }
+  @media screen and (min-width: 1024px) {
+    .toolbar {
+      -webkit-box-orient: horizontal;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: row;
+              flex-direction: row; } }
 
 .filter {
   display: -webkit-box;
@@ -407,7 +418,7 @@ h4 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   margin: .4rem .5rem;
   cursor: pointer; }
 
@@ -433,6 +444,16 @@ h4 {
           flex: 1 0 auto;
   max-width: 100%;
   margin: 1rem 1rem; }
+  @media screen and (min-width: 1024px) {
+    .portfolio-item {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 45%;
+              flex: 0 1 45%; } }
+  @media screen and (min-width: 1400px) {
+    .portfolio-item {
+      -webkit-box-flex: 0;
+          -ms-flex: 0 1 45%;
+              flex: 0 1 45%; } }
 
 .portfolio-wrapper {
   overflow: hidden;
@@ -474,6 +495,18 @@ h4 {
 .portfolio-label-button {
   color: red; }
 
+marquee {
+  width: 100%;
+  border: 2px solid black;
+  padding: .5rem; }
+  marquee svg {
+    height: 80px; }
+  @media screen and (min-width: 1024px) {
+    marquee {
+      width: 85%; }
+      marquee svg {
+        height: 100px; } }
+
 .project-header {
   background-color: red;
   position: relative; }
@@ -513,10 +546,14 @@ h4 {
   font-size: 2rem; }
 
 .info-block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 100%;
+          flex: 1 1 100%;
   padding: 1rem; }
   .info-block h3 {
     text-align: left;
-    position: relative; }
+    position: relative;
+    margin-bottom: .5rem; }
     .info-block h3:after {
       content: "";
       position: absolute;
@@ -525,6 +562,12 @@ h4 {
       width: 30%;
       height: 2px;
       background-color: red; }
+
+.info-block-stack span {
+  background-color: #ccc;
+  color: white;
+  padding: 0.2rem;
+  text-transform: uppercase; }
 
 .info-block-dev {
   margin-top: 1rem; }
@@ -746,26 +789,12 @@ input[type=range]:focus::-ms-fill-upper {
   z-index: -1;
   height: 90%;
   width: 100%;
-  border: 2px solid black;
-  border-top: none;
+  border: 4px solid black;
   top: 2.4rem;
-  position: absolute; }
-  .contact-box:after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 6px;
-    background-color: black;
-    left: 0;
-    z-index: -1; }
-  .contact-box:before {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 6px;
-    background-color: black;
-    right: 0;
-    z-index: -1; }
+  position: absolute;
+  margin: 0 auto;
+  right: 0;
+  left: 0; }
 
 .contact-intro {
   text-align: center;
@@ -813,7 +842,7 @@ input[type=range]:focus::-ms-fill-upper {
 .form-label {
   display: block;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   opacity: 0;
   -webkit-transition: 0.3s ease-in-out all;
   transition: 0.3s ease-in-out all; }

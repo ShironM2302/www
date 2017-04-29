@@ -90,7 +90,9 @@
 .portfolio-label-button {
     color: red;
 }
-
+.stack-info{
+    text-align:center;
+}
 marquee{
     width: 100%;
     border: 2px solid black;
@@ -101,7 +103,7 @@ marquee{
     }
 
     @include mQ($laptop){
-        width: 85%;
+        width: 90%;
 
         svg{
             height:100px;

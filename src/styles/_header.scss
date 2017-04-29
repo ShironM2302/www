@@ -15,6 +15,7 @@
 
 .header-logo {
     color: white;
+    z-index: 1;
 }
 
 .menu-icon {
@@ -98,8 +99,12 @@
 }
 
 .nav {
-    height: 75%;
+    height: 65%;
     width: inherit;
+    
+    @include mQ($laptop){
+        font-size: 1.5rem;
+    }
 }
 
 .nav-list {
@@ -127,7 +132,7 @@
 
 .nav-info {
     color: white;
-    height: 25%;
+    height: 35%;
 }
 
 .nav-row {

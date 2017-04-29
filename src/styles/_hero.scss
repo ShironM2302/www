@@ -4,3 +4,13 @@
     background-color: #2196f3;
 
 }
+
+.arrow-block-hero{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+
+    span{
+        color: white;
+    }
+}

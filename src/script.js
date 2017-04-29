@@ -8,13 +8,20 @@ $(function() {
 function fn(){
     
     //so font awesome can be recognised
-    var scss = require('./styles/style.scss');
+var scss = require('./styles/style.scss');
 
     //nav menu
 $('.menu-icon').on('click', function (){
     $(this).toggleClass('hamburger cross');
     $('.overlay').toggleClass('overlay--show');
+});
+
+// close nav menu
+$('.nav-item a').on('click', function (){
+    $('.overlay').toggleClass('overlay--show');
+    $('.menu-icon').toggleClass('hamburger cross');
 })
+
 
 //parralx footer
 

@@ -16,6 +16,7 @@
     height: 100%;
     border-radius: 100%;
     border: 1px solid goldenrod;
+    
 }
 
 @supports (-webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%)) or (clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%)) {
@@ -56,7 +57,8 @@
 .timeline-card {
     display: none;
     flex: 1 1 100%;
-    border: 1px solid black;
+    // border: 1px solid black;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
     margin: 0.75rem 0;
 }
 

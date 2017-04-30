@@ -1,5 +1,5 @@
 .project-header {
-    background-color: red;
+    background-image: $s-bg;
     position: relative;
 }
 
@@ -70,7 +70,7 @@
             left:0;
             width: 30%;
             height:2px;
-            background-color: red;
+            background-color: $p-accent;
         }
     }
 

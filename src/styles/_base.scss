@@ -2,6 +2,7 @@
 
 html{
     font-size: calc(100% + .35vw);
+    
 }
 
 body{
@@ -10,6 +11,7 @@ body{
     height: 100%;
     line-height: 1.7;
     z-index: 0;
+    
     
 }
 
@@ -23,6 +25,7 @@ section{
     padding-bottom: 1rem;
     padding-top: 1rem;
     position: relative;
+    background-size: cover, contain;
 }
 
 .container{
@@ -66,7 +69,7 @@ h1{
         position: absolute;
         width: 60px;
         height: 2px;
-        background-color: #EE2B45;
+        background-color: $p-accent;
         left: 50%;
         margin-left: -30px;
         bottom: 0;
@@ -79,14 +82,13 @@ h2{
     font-size: 2rem;
     text-align: center;
     position: relative;
-    background: white;
 
         &:before{
         content: '';
         position: absolute;
         width: 60px;
         height: 2px;
-        background-color: #EE2B45;
+        background-color: $p-accent;
         left: 50%;
         margin-left: -30px;
         bottom: 0;
@@ -122,8 +124,8 @@ h4{
     text-transform: uppercase;
     overflow: hidden;
     transition: all 0.5s ease-in-out;
-        z-index: 0;
-        -webkit-tap-highlight-color: rgba(0,0,0,0);
+    z-index: 0;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
         
 
     &:after{
@@ -141,10 +143,12 @@ h4{
 
     &:hover{
         color:white;
+        box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
+        transition: 0.5s all ease-in-out;
 
         &:after{
-            background-color: red;
-            height: 350%;
+            background-color: $p-accent;
+            height: 450%;
             opacity: 1;
         }
 
@@ -153,9 +157,9 @@ h4{
 
 
 .btn-line{
-    background-color: red;
+    background-color: $p-accent;
     position: absolute;
-    z-index: 1;
+    z-index: 4;
 }
 
 .btn-line--top{
@@ -205,7 +209,7 @@ h4{
         position: absolute;
     bottom: -2.4rem;
     left: 50%;
-    background-color: red;
+    background-color: $p-accent;
     width: 2px;
     height: 60px;
     z-index: 3;
@@ -215,11 +219,12 @@ h4{
         content: "";
         width: 12px;
         height: 12px;
-        border-bottom: 2px solid red;
-        border-left: 2px solid red;
+        border-bottom: 2px solid $p-accent;
+        border-left: 2px solid $p-accent;
         bottom: 0;
         left: -5px;
         transform: rotate(-45deg);
     }
     }
+
 }

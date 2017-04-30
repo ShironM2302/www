@@ -1,5 +1,5 @@
 .portfolio {
-    // background-color: gray;
+    background: $p-bg;
 }
 
 .toolbar {
@@ -29,7 +29,7 @@
 .filter-active .filter-button {
     color: white;
     &:after {
-        background-color: red;
+        background-color: $p-accent;
         height: 200px;
         opacity: 1;
     }
@@ -59,7 +59,7 @@
     cursor: pointer;
     max-width: 100%;
     height: 100%;
-    border:1px solid goldenrod;
+    border:1px solid $p-accent;
     box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -95,7 +95,7 @@
 
 
 .portfolio-label-button {
-    color: red;
+    color: $p-accent;
 }
 .stack-info{
     text-align:center;

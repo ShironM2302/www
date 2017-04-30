@@ -22,6 +22,10 @@
 
 }
 
+.contact-title{
+    background: $p-bg;
+}
+
 .contact-intro{
     text-align: center;
         padding: 0 2%;
@@ -79,7 +83,7 @@
 }
 
 .form-button{
-    background: white;
+    background: $p-bg;;
     
 }
 

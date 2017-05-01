@@ -25,7 +25,7 @@ section{
     padding-bottom: 1rem;
     padding-top: 1rem;
     position: relative;
-    background-size: cover, contain;
+    background-size: cover, cover;
 }
 
 .container{
@@ -227,4 +227,36 @@ h4{
     }
     }
 
+}
+
+.m-scene {
+  /** Basic styles for an animated element */
+  .scene_element {
+    animation-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+    animation-fill-mode: both;
+
+  }
+
+  /** An element that movetoleft*/
+  .scene_element--movetoleft {
+    animation-name: moveToLeft;
+  }
+
+  /** An element that fades in and slides up */
+  .scene_element--fadeinup {
+    animation-name: fadeInUp;
+  }
+
+  /** An element that fades in and slides from the right */
+  .scene_element--fadein {
+    animation-name: fadeIn;
+  }
+
+  /** Reverse "exit" animations */
+  &.is-exiting {
+      .scene_element {
+        animation-direction: alternate-reverse;
+      }
+  }
 }

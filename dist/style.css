@@ -25,7 +25,7 @@ section {
   padding-bottom: 1rem;
   padding-top: 1rem;
   position: relative;
-  background-size: cover, contain; }
+  background-size: cover, cover; }
 
 .container {
   margin: 0 auto;
@@ -208,6 +208,32 @@ h4 {
       -webkit-transform: rotate(-45deg);
               transform: rotate(-45deg); }
 
+.m-scene {
+  /** Basic styles for an animated element */
+  /** An element that movetoleft*/
+  /** An element that fades in and slides up */
+  /** An element that fades in and slides from the right */
+  /** Reverse "exit" animations */ }
+  .m-scene .scene_element {
+    -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+    -webkit-transition-timing-function: ease-in-out;
+            transition-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both; }
+  .m-scene .scene_element--movetoleft {
+    -webkit-animation-name: moveToLeft;
+            animation-name: moveToLeft; }
+  .m-scene .scene_element--fadeinup {
+    -webkit-animation-name: fadeInUp;
+            animation-name: fadeInUp; }
+  .m-scene .scene_element--fadein {
+    -webkit-animation-name: fadeIn;
+            animation-name: fadeIn; }
+  .m-scene.is-exiting .scene_element {
+    -webkit-animation-direction: alternate-reverse;
+            animation-direction: alternate-reverse; }
+
 @-webkit-keyframes burger-jiggle {
   0% {
     width: 100%; }
@@ -223,6 +249,50 @@ h4 {
     width: 50%; }
   100% {
     width: 100%; } }
+
+@-webkit-keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0); }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+            transform: none; } }
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@-webkit-keyframes moveToLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  to { } }
+
+@keyframes moveToLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%); }
+  to { } }
 
 .header {
   width: 100%;
@@ -424,7 +494,8 @@ h4 {
     color: white; }
 
 .portfolio {
-  background: white; }
+  background: white;
+  color: #505050; }
 
 .toolbar {
   display: -webkit-box;
@@ -770,7 +841,8 @@ input[type=range]::-webkit-slider-runnable-track {
   box-shadow: 0px 0px 0px #000000;
   background: goldenrod;
   border-radius: 1px;
-  border: 0px solid #000000; }
+  border: 0px solid #000000;
+  outline: none; }
 
 input[type=range]::-webkit-slider-thumb {
   box-shadow: 0px 0px 0px #000000;
@@ -784,7 +856,10 @@ input[type=range]::-webkit-slider-thumb {
   margin-top: -7px; }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-  background: goldenrod; }
+  background: goldenrod;
+  outline: none;
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000; }
 
 input[type=range]::-moz-range-track {
   width: 100%;
@@ -813,14 +888,19 @@ input[type=range]::-ms-track {
   color: transparent; }
 
 input[type=range]::-ms-fill-lower {
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000;
   background: goldenrod;
   border-radius: 2px; }
 
 input[type=range]::-ms-fill-upper {
   background: goldenrod;
-  border-radius: 2px; }
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 0px solid #000000; }
 
 input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0px #000000;
   border: 1px solid goldenrod;
   height: 18px;
   width: 18px;
@@ -838,7 +918,9 @@ input[type=range]:focus::-ms-fill-upper {
 .contact {
   position: relative;
   padding-bottom: 1rem;
-  z-index: 2; }
+  z-index: 2;
+  background: white;
+  color: #505050; }
 
 .contact-box {
   z-index: -1;

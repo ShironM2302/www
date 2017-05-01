@@ -1,5 +1,10 @@
 var scss = require('./styles/style.scss');
 import "jQuery";
+
+import {TweenMax, TimelineMax} from 'gsap';
+
+import * as ScrollMagic from 'scrollmagic';
+
 import "./vendor/smoothstate/jquery.smoothState.min.js";
 
 $(function() {
@@ -132,17 +137,21 @@ fn();
 
 //smoothstate
 
+
+
 var options = {
     prefetch: true,
     cacheLength: 2,
     onStart: {
-      duration: 250, // Duration of our animation
+      duration: 500, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         $container.addClass('is-exiting');
 
         // Restart your animation
         smoothState.restartCSSAnimations();
+        
+
       }
     },
     onReady: {
@@ -153,6 +162,9 @@ var options = {
 
         // Inject the new content
         $container.html($newContent);
+
+                // Scroll user to the top
+        $('html, body').animate({ 'scrollTop': 0 });
 
       }
     },

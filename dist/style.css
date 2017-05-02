@@ -548,8 +548,8 @@ h4 {
 
 .portfolio-item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 80%;
-          flex: 0 1 80%;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
   max-width: 100%;
   margin: 1rem 1rem; }
   @media screen and (min-width: 1024px) {
@@ -624,17 +624,83 @@ marquee {
   position: relative; }
 
 .jumbotron {
-  background-color: #607d8b;
+  position: relative;
   width: 100%;
-  height: 60vh; }
+  height: 50vh; }
+
+.jumbotron-background {
+  -webkit-filter: blur(5px);
+          filter: blur(5px);
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute; }
+
+.jumbotron-background--editor {
+  background: none; }
+  @media screen and (min-width: 1024px) {
+    .jumbotron-background--editor {
+      background: url(images/editor.png);
+      background-size: cover; } }
+
+.jumbotron-background--ctv {
+  background: none; }
+  @media screen and (min-width: 1024px) {
+    .jumbotron-background--ctv {
+      background: url(images/ctv.png);
+      background-size: cover; } }
+
+.jumbotron-background--taxcalc {
+  background: none; }
+  @media screen and (min-width: 1024px) {
+    .jumbotron-background--taxcalc {
+      background: url(images/taxcalc.png);
+      background-size: cover; } }
+
+.jumbotron-background--weather {
+  background: none; }
+  @media screen and (min-width: 1024px) {
+    .jumbotron-background--weather {
+      background: url(images/weather.png);
+      background-size: cover; } }
+
+.jumbotron-background--enf {
+  background: none; }
+  @media screen and (min-width: 1024px) {
+    .jumbotron-background--enf {
+      background: url(images/ENF.png);
+      background-size: cover; } }
+
+.jumbotron-img {
+  position: absolute;
+  z-index: 2;
+  max-width: 100%;
+  max-height: 100%;
+  margin-top: 1rem;
+  display: block;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  @media screen and (min-width: 1024px) {
+    .jumbotron-img {
+      padding-left: 5rem; } }
+
+.back-link {
+  position: absolute;
+  right: .5rem;
+  margin-top: 1rem;
+  z-index: 3; }
+
+@media screen and (min-width: 1024px) {
+  .back-button--white {
+    color: white; } }
+
+.project-info {
+  padding-top: 0; }
 
 .project-title {
   font-size: 2rem; }
-
-.back-link {
-  display: block;
-  float: right;
-  margin-top: 1rem; }
 
 .project-box {
   background-color: rgba(128, 128, 128, 0.16);

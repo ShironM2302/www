@@ -126,6 +126,11 @@ $('#message').on('keyup focus', function (e) {
     else {
         $(this).prev().addClass('form-label--show');
     }
+});
+
+$('.back-link').on('click', function(e) {
+    e.preventDefault();
+    window.history.back();
 })
 
 }
@@ -136,22 +141,17 @@ fn();
 
 
 //smoothstate
-
-
-
 var options = {
     prefetch: true,
     cacheLength: 2,
+    blacklist: 'form',
     onStart: {
       duration: 500, // Duration of our animation
       render: function ($container) {
         // Add your CSS animation reversing class
         $container.addClass('is-exiting');
-
         // Restart your animation
         smoothState.restartCSSAnimations();
-        
-
       }
     },
     onReady: {

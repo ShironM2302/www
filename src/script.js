@@ -128,6 +128,47 @@ $('#message').on('keyup focus', function (e) {
     }
 });
 
+//form sending
+  // Get the form.
+    var form = $('#ajax-contact');
+
+    // Get the messages div.
+    var formMessages = $('#form-msg');
+
+    // Set up an event listener for the contact form.
+$(form).submit(function(e) {
+    // Stop the browser from submitting the form.
+    e.preventDefault();
+
+    // Serialize the form data.
+var formData = $(form).serialize();
+
+console.log(formData);
+
+// Submit the form using AJAX.
+$.ajax({
+    type: 'POST',
+    url: $(form).attr('action'),
+    data: formData
+})
+.done(function(response) {
+    // Make sure that the formMessages div has the 'success' class.
+    // $(formMessages).removeClass('error');
+    // $(formMessages).addClass('success');
+
+    // Set the message text.
+    $(formMessages).text(response);
+
+    // Clear the form.
+    $('#name').val('');
+    $('#email').val('');
+    $('#message').val('');
+})
+
+});
+
+
+//back link on projects pages
 $('.back-link').on('click', function(e) {
     e.preventDefault();
     window.history.back();

@@ -614,28 +614,31 @@
             </div>
 
             <div class="row form-row">
-              <form class="contact-form" action="/action_page.php" method="post">
+              <form id="ajax-contact"  method="POST" action="mailer.php" class="contact-form" >
                 <fieldset>
-                  <label class="form-label form-label--hide" for="name" required>Your Name:</label>
-                  <input id="name" type="text" placeholder="Your name...">
+                  <label class="form-label form-label--hide" for="name">Your Name:</label>
+                  <input name="name" id="name" type="text" placeholder="Your name..."required>
                 </fieldset>
                 <fieldset>
                   <label class="form-label form-label--hide" for="email">Your Email:</label>
-                  <input id="email" type="email" placeholder="Your email...">
+                  <input name="email" id="email" type="email" placeholder="Your email..." required>
                 </fieldset>
                 <fieldset>
                   <label class="form-label form-label--hide" for="message">Your Message:</label>
-                  <textarea id="message" name="your-message" id="" cols="30" rows="10" placeholder="Type your message here..."></textarea>
+                  <textarea name="msg" id="message" name="your-message" id="" cols="30" rows="10" placeholder="Type your message here..." required></textarea>
                 </fieldset>
+                  <button class="button form-button" type="submit">
+                    <div class="btn-line btn-line--top"></div>
+                    <div class="btn-line btn-line--btm"></div>
+                    <div class="btn-line btn-line--right"></div>
+                    <div class="btn-line btn-line--left"></div>
+                    Send
+                  </button>
+
+                  <div id="form-msg"></div>
               </form>
 
-              <button class="button form-button" type="submit">
-              <div class="btn-line btn-line--top"></div>
-              <div class="btn-line btn-line--btm"></div>
-              <div class="btn-line btn-line--right"></div>
-              <div class="btn-line btn-line--left"></div>
-              Send
-            </button>
+
 
             </div>
 

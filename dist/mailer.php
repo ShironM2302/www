@@ -4,7 +4,7 @@ $from = $_POST['email'];
 $message = $_POST['msg'];
 
 $to = "shironm1993@gmail.com";
-$subject = "Hello World";
+$subject = "Portfolio Enquiry";
 
 
 $headers = "From:" . $from;

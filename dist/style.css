@@ -1059,6 +1059,14 @@ input[type=range]:focus::-ms-fill-upper {
 .form-button {
   background: white; }
 
+#form-msg {
+  display: block;
+  position: absolute;
+  bottom: -45px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+
 .content {
   z-index: 1;
   background: white; }

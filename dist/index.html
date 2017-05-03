@@ -126,8 +126,25 @@
 
         <!--start of home-->
         <section id="home" class="hero ">
+          <div class="hero-wrapper">
+            <div class="hero-info">
+              <h1 class="hero-title">Front End Developer</h1>
+              <div class="hero-traits">
+                <span class="trait trait-one">Creative</span>
+                <span class="trait dash-one">/</span>
+                <span class="trait trait-two">Problem-Solver</span>
+                <span class="trait dash-two">/</span>
+                <span class="trait trait-three">Passionate</span>
+              </div>
 
+              <p class="slogan">Let's do great things</p>
+            </div>
 
+            <div class="f-ball f-ball--left"></div>
+            <div class="f-ball f-ball--right"></div>
+            <div class="f-ball f-ball--center"></div>
+
+          </div>
           <div class="arrow-block arrow-block-hero">
             <span>My Projects</span>
             <div class="arrow"></div>
@@ -420,12 +437,10 @@
                       <stop stop-color="#9CB6E0" offset="100%" />
                     </radialGradient>
                   </defs>
-                  <path d="M128.032.456L.298 74.203v147.495l127.734 73.748 127.735-73.748V74.203L128.032.456z" fill="url(#a)"
-                  />
-                  <path d="M128.034 75.263L64.69 111.834v73.144l63.344 36.572 63.344-36.572v-73.144l-63.344-36.571z" fill="#6F95DB"
-                  />
-                  <path d="M128 0L0 74.25l128 69.693 128-69.238L128 0zM128 153.509L0 221.38l128 73.793 127.544-74.249L128 153.51z"
-                    fill="#FFF" fill-opacity=".1" />
+                  <path d="M128.032.456L.298 74.203v147.495l127.734 73.748 127.735-73.748V74.203L128.032.456z" fill="url(#a)" />
+                  <path d="M128.034 75.263L64.69 111.834v73.144l63.344 36.572 63.344-36.572v-73.144l-63.344-36.571z" fill="#6F95DB" />
+                  <path d="M128 0L0 74.25l128 69.693 128-69.238L128 0zM128 153.509L0 221.38l128 73.793 127.544-74.249L128 153.51z" fill="#FFF"
+                    fill-opacity=".1" />
                 </svg>
                 <!--angularjs-->
                 <svg viewBox="0 0 128 128">
@@ -614,10 +629,10 @@
             </div>
 
             <div class="row form-row">
-              <form id="ajax-contact"  method="POST" action="mailer.php" class="contact-form" >
+              <form id="ajax-contact" method="POST" action="mailer.php" class="contact-form">
                 <fieldset>
                   <label class="form-label form-label--hide" for="name">Your Name:</label>
-                  <input name="name" id="name" type="text" placeholder="Your name..."required>
+                  <input name="name" id="name" type="text" placeholder="Your name..." required>
                 </fieldset>
                 <fieldset>
                   <label class="form-label form-label--hide" for="email">Your Email:</label>
@@ -627,7 +642,7 @@
                   <label class="form-label form-label--hide" for="message">Your Message:</label>
                   <textarea name="msg" id="message" name="your-message" id="" cols="30" rows="10" placeholder="Type your message here..." required></textarea>
                 </fieldset>
-                  <button class="button form-button" type="submit">
+                <button class="button form-button" type="submit">
                     <div class="btn-line btn-line--top"></div>
                     <div class="btn-line btn-line--btm"></div>
                     <div class="btn-line btn-line--right"></div>
@@ -635,7 +650,7 @@
                     Send
                   </button>
 
-                  <div id="form-msg">msg</div>
+                <div id="form-msg">msg</div>
               </form>
 
 

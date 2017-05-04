@@ -13,9 +13,9 @@ $(function() {
 function fn(){
 
     var master = new TimelineMax()
-        // .add(mainBanner())
-        // .add(leftBanner())
-        // .add(rightBanner())
+        .add(mainBanner())
+        .add(leftBanner())
+        .add(rightBanner())
         .add(centerBanner());
 
 function mainBanner(){
